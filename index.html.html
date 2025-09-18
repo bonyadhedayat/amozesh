@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>بنیاد هدایت | دوره توانمندسازی امامان جماعت</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <style>
+ :root {
+ --turquoise: #2a7a8c;
+ --pistachio: #a8c090;
+ --gold: #D4AF37;
+ --light-turquoise: #e0f2f1;
+ --light-pistachio: #f1f8e9;
+ --dark-turquoise: #1a5f6e;
+ --dark-pistachio: #7a9c5e;
+ --white: #ffffff;
+ --gray: #666666;
+ --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+ --border-radius: 15px;
+ }
+ 
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Vazir', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+ 
+ body {
+ background-color: #f8f8f8;
+ color: #333;
+ line-height: 1.8;
+ direction: rtl;
+ }
+ 
+ /* Header Styles */
+ header {
+ background: linear-gradient(135deg, var(--dark-turquoise), var(--dark-pistachio));
+ padding: 0;
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+ border-bottom: 2px solid var(--gold);
+ }
+ 
+ .header-content {
+ max-width: 1200px;
+ margin: 0 auto;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 0 2rem;
+ }
+ 
+ .logo {
+ display: flex;
+ align-items: center;
+ color: white;
+ font-size: 1.6rem;
+ font-weight: bold;
+ padding: 1rem 0;
+ }
+ 
+ .logo i {
+ margin-left: 10px;
+ font-size: 2.2rem;
+ color: var(--gold);
+ }
+ 
+ nav ul {
+ display: flex;
+ list-style: none;
+ }
+ 
+ nav li {
+ margin: 0 5px;
+ }
+ 
+ nav a {
+ color: white;
+ text-decoration: none;
+ padding: 1.2rem 1.5rem;
+ border-radius: 8px;
+ transition: all 0.3s ease;
+ font-weight: 500;
+ font-size: 1.1rem;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ text-align: center;
+ min-width: 80px;
+ }
+ 
+ nav a:hover, nav a.active {
+ background-color: rgba(255, 255, 255, 0.2);
+ transform: translateY(-2px);
+ }
+ 
+ nav a i {
+ font-size: 1.4rem;
+ margin-bottom: 5px;
+ }
+ 
+ nav a span {
+ font-size: 0.9rem;
+ }
+ 
+ /* Hero Section */
+ #hero {
+ background: linear-gradient(rgba(26, 95, 110, 0.9), rgba(42, 122, 140, 0.8)), 
+ url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%232a7a8c"/><path d="M0,50 Q25,30 50,50 T100,50 L100,100 L0,100 Z" fill="%23a8c090"/></svg>');
+ background-size: cover;
+ background-position: center;
+ height: 70vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ color: white;
+ padding: 0 2rem;
+ position: relative;
+ overflow: hidden;
+ }
+ 
+ .hero-content {
+ max-width: 800px;
+ z-index: 2;
+ }
+ 
+ .hero-content h1 {
+ font-size: 2.8rem;
+ margin-bottom: 1.5rem;
+ text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+ font-weight: 700;
+ }
+ 
+ .hero-content h2 {font-size: 2rem;
+ color: var(--gold);
+ font-weight: 500;
+ margin-bottom: 2rem;
+ text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+ }
+ 
+ .hero-content p {
+ font-size: 1.2rem;
+ max-width: 600px;
+ margin: 0 auto;
+ line-height: 1.8;
+ }
+ 
+ .hero-pattern {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ background-image: 
+ radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 10%),
+ radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1) 0%, transparent 10%);
+ z-index: 1;
+ }
+ 
+ /* Custom Islamic Icons */
+ .custom-icon {
+ width: 40px;
+ height: 40px;
+ background-size: contain;
+ background-repeat: no-repeat;
+ background-position: center;
+ margin-bottom: 8px;
+ }
+ 
+ .icon-home {
+ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M12 5.69l5.69 5.69L18 11.07V5h-6v.69M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2z'/%3E%3C/svg%3E");
+ }
+ 
+ .icon-book {
+ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6V4h12v12z'/%3E%3C/svg%3E");
+ }
+ 
+ .icon-target {
+ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z'/%3E%3C/svg%3E");
+ }
+ 
+ .icon-users {
+ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M16 7c0-2.21-1.79-4-4-4S8 4.79 8 7s1.79 4 4 4 4-1.79 4-4zm-4 6c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E");
+ }
+ 
+ .icon-calendar {
+ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z'/%3E%3C/svg%3E");
+ }
+ 
+ .icon-tasks {
+ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z'/%3E%3Cpath d='M10 17l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E");
+ }
+ 
+ .icon-money {
+ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z'/%3E%3C/svg%3E");
+ }
+ 
+ /* Section Styles */
+ section {
+ padding: 5rem 2rem;
+ position: relative;
+ overflow: hidden;
+ }
+ 
+ .section-header {
+ text-align: center;
+ margin-bottom: 3rem;
+ position: relative;
+ }
+ 
+ .section-header h2 {
+ font-size: 2.2rem;
+ color: var(--dark-turquoise);
+ margin-bottom: 1rem;
+ display: inline-block;
+ padding: 0 20px;
+ position: relative;
+ font-weight: 700;
+ }.section-header h2:before,
+ .section-header h2:after {
+ content: "";
+ position: absolute;
+ top: 50%;
+ width: 100px;
+ height: 3px;
+ background: linear-gradient(to right, var(--turquoise), var(--pistachio));
+ }
+ 
+ .section-header h2:before {
+ right: 100%;
+ }
+ 
+ .section-header h2:after {
+ left: 100%;
+ }
+ 
+ .container {
+ max-width: 1200px;
+ margin: 0 auto;
+ }
+ 
+ /* Introduction Section */
+ #introduction {
+ background-image: url('https://lh3.googleusercontent.com/d/1YHXTpRagZ_9CDHeprg89l3hk_0HPmMIx=s800');
+ background-size: cover;
+ background-position: center;
+ background-attachment: fixed;
+ position: relative;
+ }
+ 
+ #introduction:before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: rgba(224, 242, 241, 0.9); /* var(--light-turquoise) با شفافیت */
+ z-index: 1;
+ }
+ 
+ #introduction .container {
+ position: relative;
+ z-index: 2;
+ }
+ 
+ /* Objectives Section */
+ #objectives {
+ background-color: var(--light-pistachio);
+ background-image: 
+ radial-gradient(circle at 90% 20%, rgba(168, 192, 144, 0.1) 0%, rgba(168, 192, 144, 0) 20%),
+ radial-gradient(circle at 10% 80%, rgba(42, 122, 140, 0.1) 0%, rgba(42, 122, 140, 0) 20%);
+ }
+ 
+ .cards-container {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 2rem;
+ }
+ 
+ .card {
+ background: white;
+ border-radius: 15px;
+ overflow: hidden;
+ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+ transition: transform 0.3s ease;
+ border-top: 4px solid var(--turquoise);
+ }
+ 
+ .card:hover {
+ transform: translateY(-10px);
+ }
+ 
+ .card-header {
+ background: linear-gradient(135deg, var(--turquoise), var(--pistachio));
+ color: white;
+ padding: 1.5rem;
+ display: flex;
+ align-items: center;
+ }
+ 
+ .card-header i {
+ font-size: 1.8rem;
+ margin-left: 15px;
+ }
+ 
+ .card-body {
+ padding: 1.5rem;
+ }
+ 
+ .card-body ul {
+ padding-right: 1.5rem;
+ }
+ 
+ .card-body li {
+ margin-bottom: 0.8rem;
+ position: relative;
+ }
+ 
+ .card-body li:before {
+ content: "•";
+ color: var(--turquoise);
+ font-weight: bold;
+ display: inline-block;
+ width: 1em;
+ margin-left: -1em;
+ }
+ 
+ /* Audience Section */
+ #audience {
+ background-color: var(--light-turquoise);
+ }
+ 
+ .audience-list {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: 2rem;
+ margin-top: 2rem;
+ }
+ 
+ .audience-item {
+ background: white;
+ border-radius: 15px;
+ padding: 2rem;
+ text-align: center;
+ width: 220px;
+ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+ border-top: 4px solid var(--pistachio);
+ transition: transform 0.3s ease;
+ }
+ 
+ .audience-item:hover {
+ transform: translateY(-10px);
+ }
+ 
+ .audience-item i {
+ font-size: 3rem;
+ color: var(--turquoise);
+ margin-bottom: 1rem;
+ }
+ 
+ /* Process Section */
+ #process {
+ background-color: var(--light-pistachio);
+ }.process-description {
+ max-width: 800px;
+ margin: 0 auto 3rem;
+ background: white;
+ padding: 2rem;
+ border-radius: 15px;
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+ border: 2px solid var(--turquoise);
+ text-align: justify;
+ line-height: 2;
+ }
+ 
+ .timeline {
+ position: relative;
+ max-width: 800px;
+ margin: 0 auto;
+ }
+ 
+ .timeline:before {
+ content: '';
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ width: 4px;
+ background: linear-gradient(to bottom, var(--turquoise), var(--pistachio));
+ right: 50%;
+ transform: translateX(50%);
+ }
+ 
+ .timeline-item {
+ margin-bottom: 3rem;
+ position: relative;
+ }
+ 
+ .timeline-content {
+ width: 45%;
+ padding: 1.5rem;
+ background: white;
+ border-radius: 15px;
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+ position: relative;
+ }
+ 
+ .timeline-content:after {
+ content: '';
+ position: absolute;
+ top: 20px;
+ width: 20px;
+ height: 20px;
+ background: white;
+ transform: rotate(45deg);
+ }
+ 
+ .timeline-item:nth-child(odd) .timeline-content {
+ margin-right: 55%;
+ }
+ 
+ .timeline-item:nth-child(odd) .timeline-content:after {
+ right: -10px;
+ }
+ 
+ .timeline-item:nth-child(even) .timeline-content {
+ margin-left: 55%;
+ }
+ 
+ .timeline-item:nth-child(even) .timeline-content:after {
+ left: -10px;
+ }
+ 
+ .timeline-icon {
+ position: absolute;
+ top: 0;
+ width: 50px;
+ height: 50px;
+ background: linear-gradient(135deg, var(--turquoise), var(--pistachio));
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: white;
+ font-size: 1.5rem;
+ right: 50%;
+ transform: translateX(50%);
+ }
+ 
+ /* Stages Section */
+ #stages {
+ background-color: var(--light-turquoise);
+ }.stages-container {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+ gap: 2rem;
+ }
+ 
+ .stage-card {
+ background: white;
+ border-radius: var(--border-radius);
+ overflow: hidden;
+ box-shadow: var(--shadow);
+ border-top: 4px solid var(--pistachio);
+ transition: transform 0.3s ease;
+ }
+ 
+ .stage-header {
+ background: linear-gradient(135deg, var(--turquoise), var(--pistachio));
+ color: white;
+ padding: 1.5rem;
+ text-align: center;
+ font-size: 1.3rem;
+ font-weight: 600;
+ }
+ 
+ .stage-body {
+ padding: 2rem;
+ }
+ 
+ .syllabus {
+ margin-top: 2rem;
+ padding: 2rem;
+ background: var(--light-turquoise);
+ border-radius: var(--border-radius);
+ border: 1px dashed var(--turquoise);
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+ }
+ 
+ .syllabus h4 {
+ color: var(--dark-turquoise);
+ margin-bottom: 1rem;
+ padding-bottom: 0.5rem;
+ border-bottom: 2px solid var(--pistachio);
+ font-size: 1.3rem;
+ font-weight: 600;
+ }
+ 
+ .syllabus ul {
+ padding-right: 1.5rem;
+ margin-bottom: 1.5rem;
+ }
+ 
+ .syllabus li {
+ margin-bottom: 0.8rem;
+ position: relative;
+ line-height: 1.8;
+ }.syllabus li:before {
+ content: "•";
+ color: var(--turquoise);
+ font-weight: bold;
+ display: inline-block;
+ width: 1em;
+ margin-left: -1em;
+ }
+ 
+ .syllabus p {
+ margin-bottom: 1rem;
+ line-height: 1.8;
+ }
+ 
+ .phase-summary {
+ background: linear-gradient(135deg, var(--dark-turquoise), var(--dark-pistachio));
+ color: white;
+ padding: 2rem;
+ border-radius: var(--border-radius);
+ margin-top: 2rem;
+ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+ border: 2px solid var(--gold);
+ }
+ 
+ .phase-summary h3 {
+ color: var(--gold);
+ margin-bottom: 1rem;
+ text-align: center;
+ font-size: 1.5rem;
+ }
+ 
+ .phase-summary p {
+ margin-bottom: 1rem;
+ line-height: 1.8;
+ }
+ 
+ .phase-summary ul {
+ padding-right: 1.5rem;
+ margin-bottom: 1rem;
+ }
+ 
+ .phase-summary li {
+ margin-bottom: 0.8rem;
+ position: relative;
+ }
+ 
+ .phase-summary li:before {
+ content: "✓";
+ color: var(--gold);
+ font-weight: bold;
+ display: inline-block;
+ width: 1.5em;
+ margin-left: -1.5em;
+ }
+ 
+ /* Teasers Section */
+ #teasers {
+   background-color: #f0f7fa;
+   padding: 4rem 2rem;
+   position: relative;
+ }
+ 
+ .teasers-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+   gap: 2rem;
+   margin-top: 2rem;
+ }
+ 
+ .teaser-card {
+   background: white;
+   border-radius: 15px;
+   overflow: hidden;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   border-top: 4px solid #2a7a8c;
+ }
+ 
+ .teaser-card:hover {
+   transform: translateY(-10px);
+   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+ }
+ 
+ .teaser-header {
+   background: linear-gradient(135deg, #2a7a8c, #1a5f6e);
+   color: white;
+   padding: 1.5rem;
+   display: flex;
+   align-items: center;
+ }
+ 
+ .teaser-header i {
+   font-size: 1.8rem;
+   margin-left: 15px;
+   color: #D4AF37;
+ }
+ 
+ .teaser-header h3 {
+   font-size: 1.3rem;
+   font-weight: 600;
+ }
+ 
+ .teaser-body {
+   padding: 0;
+ }
+ 
+ .video-wrapper {
+   position: relative;
+   padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+   height: 0;
+   overflow: hidden;
+ }
+ 
+ .video-wrapper iframe {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   border: none;
+ }
+ 
+ /* Cost Section */
+ #cost {
+ background-color: var(--light-turquoise);
+ }
+ 
+ .cost-table {
+ width: 100%;
+ border-collapse: collapse;
+ background: white;
+ border-radius: var(--border-radius);
+ overflow: hidden;
+ box-shadow: var(--shadow);
+ }
+ 
+ .cost-table th {
+ background: linear-gradient(135deg, var(--turquoise), var(--pistachio));
+ color: white;
+ padding: 1.2rem;
+ text-align: center;
+ }
+ 
+ .cost-table td {
+ padding: 1rem;
+ text-align: center;
+ border-bottom: 1px solid #eee;
+ }
+ 
+ .cost-table tr:nth-child(even) {
+ background-color: #f9f9f9;
+ }
+ 
+ .cost-table tr:last-child td {
+ border-bottom: none;
+ }
+ 
+ /* Footer */
+ footer {
+ background: linear-gradient(135deg, var(--dark-turquoise), var(--dark-pistachio));
+ color: white;
+ padding: 3rem 2rem;
+ text-align: center;
+ border-top: 3px solid var(--gold);
+ }
+ 
+ .footer-content {
+ max-width: 1200px;
+ margin: 0 auto;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 2rem;
+ text-align: right;
+ }
+ 
+ .footer-section h3 {
+ margin-bottom: 1.5rem;
+ position: relative;
+ display: inline-block;
+ padding-bottom: 8px;
+ }
+ 
+ .footer-section h3:after {
+ content: '';
+ position: absolute;
+ bottom: 0;
+ right: 0;
+ width: 50px;
+ height: 3px;
+ background-color: var(--gold);
+ }
+ 
+ .footer-section ul {
+ list-style: none;
+ }
+ 
+ .footer-section li {
+ margin-bottom: 0.8rem;
+ }
+ 
+ .footer-section a {
+ color: #ddd;
+ text-decoration: none;
+ transition: color 0.3s ease;
+ display: flex;
+ align-items: center;
+ }
+ 
+ .footer-section a:hover {
+ color: var(--gold);
+ }
+ 
+ .footer-section a i {
+ margin-left: 10px;
+ }
+ 
+ .copyright {
+ margin-top: 3rem;
+ padding-top: 1.5rem;
+ border-top: 1px solid rgba(255, 255, 255, 0.1);
+ font-size: 0.9rem;
+ }/* Islamic Patterns */
+ .islamic-pattern {
+ position: absolute;
+ opacity: 0.05;
+ pointer-events: none;
+ z-index: 0;
+ }
+ 
+ .pattern-1 {
+ top: 5%;
+ right: 5%;
+ width: 200px;
+ height: 200px;
+ background:
+ radial-gradient(circle, var(--turquoise) 10%, transparent 11%),
+ radial-gradient(circle, var(--turquoise) 10%, transparent 11%);
+ background-size: 60px 60px;
+ background-position: 0 0, 30px 30px;
+ }
+ 
+ .pattern-2 {
+ bottom: 10%;
+ left: 10%;
+ width: 150px;
+ height: 150px;
+ background: 
+ linear-gradient(45deg, var(--pistachio) 25%, transparent 25%, transparent 75%, var(--pistachio) 75%),
+ linear-gradient(45deg, var(--pistachio) 25%, transparent 25%, transparent 75%, var(--pistachio) 75%);
+ background-size: 40px 40px;
+ background-position: 0 0, 20px 20px;
+ transform: rotate(45deg);
+ }
+ 
+ .pattern-3 {
+ top: 20%;
+ left: 5%;
+ width: 100px;
+ height: 100px;
+ background: 
+ radial-gradient(circle, var(--pistachio) 10%, transparent 11%),
+ radial-gradient(circle, var(--pistachio) 10%, transparent 11%);
+ background-size: 40px 40px;
+ background-position: 0 0, 20px 20px;
+ }
+ 
+ /* Responsive Design */
+ @media (max-width: 992px) {
+ .timeline:before {
+ right: 40px;
+ }
+ 
+ .timeline-item:nth-child(odd) .timeline-content,
+ .timeline-item:nth-child(even) .timeline-content {
+ width: calc(100% - 90px);
+ margin-right: 0;
+ margin-left: 0;
+ }
+ 
+ .timeline-item:nth-child(odd) .timeline-content:after,
+ .timeline-item:nth-child(even) .timeline-content:after {
+ right: auto;
+ left: -10px;
+ }
+ 
+ .hero-content h1 {
+ font-size: 2.2rem;
+ }
+ 
+ .hero-content h2 {
+ font-size: 1.8rem;
+ }
+ }
+ 
+ @media (max-width: 768px) {
+ .header-content {
+ flex-direction: column;
+ }
+ 
+ nav ul {
+ margin-top: 1rem;
+ flex-wrap: wrap;
+ justify-content: center;
+ }
+ 
+ nav li {
+ margin: 5px;
+ }
+ 
+ .section-header h2:before,
+ .section-header h2:after {
+ width: 30px;
+ }
+ 
+ .stages-container {
+ grid-template-columns: 1fr;
+ }
+ 
+ .hero-content h1 {
+ font-size: 1.8rem;
+ }
+ 
+ .hero-content h2 {
+ font-size: 1.5rem;
+ }
+ 
+ .teasers-container {
+   grid-template-columns: 1fr;
+ }
+ }
+ </style>
+</head>
+<body>
+ <!-- Header with Navigation -->
+ <header>
+ <div class="header-content">
+ <div class="logo">
+ <i class="fas fa-mosque"></i>
+ <span>بنیاد هدایت</span>
+ </div>
+ <nav>
+ <ul>
+ <li><a href="#hero" class="active">
+ <div class="custom-icon icon-home"></div>
+ <span>صفحه اصلی</span>
+ </a></li>
+ <li><a href="#introduction">
+ <div class="custom-icon icon-book"></div>
+ <span>مقدمه</span>
+ </a></li>
+ <li><a href="#objectives">
+ <div class="custom-icon icon-target"></div>
+ <span>اهداف دوره</span>
+ </a></li>
+ <li><a href="#audience"><div class="custom-icon icon-users"></div>
+ <span>مخاطبان</span>
+ </a></li>
+ <li><a href="#process">
+ <div class="custom-icon icon-calendar"></div>
+ <span>فرایند برگزاری</span>
+ </a></li>
+ <li><a href="#stages">
+ <div class="custom-icon icon-tasks"></div>
+ <span>مراحل دوره</span>
+ </a></li>
+ <li><a href="#cost">
+ <div class="custom-icon icon-money"></div>
+ <span>هزینه‌ها</span>
+ </a></li>
+ </ul>
+ </nav>
+ </div>
+ </header>
+
+ <!-- Hero Section -->
+ <section id="hero">
+ <div class="hero-pattern"></div>
+ <div class="hero-content">
+ <h1>دوره توانمندسازی امامان جماعت مراکز و نهاد های تخصصی</h1>
+ <h2>تعالی شبکه امامت</h2>
+ <p>برنامه‌ای جامع برای ارتقای مهارت‌های تبلیغی، ارتباطی و مدیریتی روحانیون در محیط‌های تخصصی</p>
+ </div>
+ </section>
+
+ <!-- Introduction Section -->
+ <section id="introduction">
+ <div class="islamic-pattern pattern-1"></div>
+ <div class="islamic-pattern pattern-2"></div>
+ <div class="container">
+ <div class="section-header">
+ <h2>مقدمه</h2>
+ </div>
+ <div class="content">
+ <p>امامان جماعت در مراکز تخصصی همچون بانک‌ها، ادارات و مؤسسات مالی، در خط مقدم تعامل دین با مسائل نوپدید جامعه قرار دارند. همانگونه که مقام معظم رهبری(مدظله العالی) تأکید فرموده‌اند: «امام جماعت امروز باید بتواند به سؤالات جدید جامعه پاسخ دهد و با زبان روز مسائل دینی را تبیین کند».</p>
+ <p>این قشر از روحانیون، ضمن ایفای نقش سنتی خود در اقامه نماز، با چالش‌های منحصر به فردی در محیط‌های حرفه‌ای مواجه هستند که نیازمند مهارت‌های ویژه‌ای است.</p>
+ <p>رهبر انقلاب اسلامی در این زمینه تصریح فرموده‌اند: «امام جماعت باید مسلح به دانش روز باشد و بتواند در فضای پیچیده امروز، معارف نورانی اسلام را به زبان قابل فهم برای همه اقشار بیان کند».</p>
+ <p>دوره حاضر با درک این ضرورت و با الهام از این رهنمودهای حکیمانه، به منظور توانمندسازی امامان جماعت در مواجهه مؤثر با مسائل محیط‌های تخصصی طراحی شده است، این دوره با تمرکز بر ارتقای مهارت‌های کاربردی، می‌کوشد تا میان دانش دینی و نیازهای محیط‌های تخصصی، پلی مستحکم ایجاد کند.</p>
+ <p>تجربه نشان داده است که امامان جماعتی که در این مراکز فعالیت می‌کنند، علاوه بر دانش فقهی، به سه مهارت کلیدی نیاز دارند: توان تبلیغ مؤثر، قدرت حل مسائل و قابلیت ارتباط سازنده. این دوره با نگاهی عملی و مبتنی بر فرمایشات رهبر معظم انقلاب و نیازهای واقعی میدانی، به تقویت این سه بعد می‌پردازد.</p>
+ </div>
+ </div>
+ </section><!-- Objectives Section -->
+ <section id="objectives">
+ <div class="container">
+ <div class="section-header">
+ <h2>اهداف دوره توانمندسازی</h2>
+ </div>
+ <div class="cards-container">
+ <div class="card">
+ <div class="card-header">
+ <i class="fas fa-microphone-alt"></i>
+ <h3>توانمندسازی تبلیغی و تبیینی</h3>
+ </div>
+ <div class="card-body">
+ <ul>
+ <li>ارتقای مهارت های جهاد تبیین در محیط های تخصصی</li>
+ <li>آموزش روش های پاسخگویی به شبهات رایج</li>
+ </ul>
+ </div>
+ </div>
+ 
+ <div class="card">
+ <div class="card-header">
+ <i class="fas fa-comments"></i>
+ <h3>تقویت مهارت های ارتباطی و مدیریتی</h3>
+ </div>
+ <div class="card-body">
+ <ul>
+ <li>آموزش فنون سخنوری و خطابه مؤثر</li>
+ <li>پرورش مهارت های ارتباطی با سطوح مختلف مخاطبین</li>
+ </ul>
+ </div>
+ </div>
+ 
+ <div class="card">
+ <div class="card-header">
+ <i class="fas fa-network-wired"></i>
+ <h3>شبکه سازی و تبادل تجربیات</h3>
+ </div>
+ <div class="card-body">
+ <ul>
+ <li>ایجاد شبکه ارتباطی بین امامان جماعت مراکز تخصصی</li>
+ <li>تسهیل تبادل تجارب موفق</li>
+ <li>طراحی نظام پشتیبانی و مشاوره پس از دوره</li>
+ </ul>
+ </div>
+ </div>
+ 
+ <div class="card">
+ <div class="card-header">
+ <i class="fas fa-hands-helping"></i>
+ <h3>انگیزه بخشی و ارتقای نقش آفرینی</h3>
+ </div>
+ <div class="card-body">
+ <ul>
+ <li>تقویت نقش امام جماعت به عنوان راهنمای اخلاقی و دینی سازمان</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Audience Section -->
+ <section id="audience">
+ <div class="container">
+ <div class="section-header">
+ <h2>مخاطبان دوره</h2>
+ </div>
+ <p style="text-align: center; margin-bottom: 2rem;">امامان جماعت و روحانیون مستقر در:</p>
+ <div class="audience-list">
+ <div class="audience-item">
+ <i class="fas fa-university"></i>
+ <h3>بانک‌ها و مؤسسات مالی</h3>
+ </div>
+ 
+ <div class="audience-item">
+ <i class="fas fa-building"></i>
+ <h3>ادارات و سازمان‌های دولتی</h3>
+ </div>
+ 
+ <div class="audience-item">
+ <i class="fas fa-briefcase"></i>
+ <h3>شرکت‌ها و مراکز اقتصادی خصوصی</h3>
+ </div>
+ 
+ <div class="audience-item">
+ <i class="fas fa-shield-alt"></i>
+ <h3>مؤسسات بیمه‌ای و اعتباری</h3>
+ </div>
+ </div>
+ </div>
+ </section><!-- Process Section -->
+ <section id="process">
+ <div class="container">
+ <div class="section-header">
+ <h2>فرایند برگزاری دوره</h2>
+ </div>
+ <div class="process-description">
+ <p>این دوره با رویکردی نظام‌مند و هدفمند طراحی شده است تا با ترکیب هوشمندانه آموزش‌های حضوری و مجازی، تحولی ملموس در مهارت‌های حرفه‌ای امامان جماعت ایجاد کند. فرایند برگزاری به گونه‌ای برنامه‌ریزی شده که ضمن رعایت اصول آموزشی مؤثر، انعطاف لازم برای تطبیق با نیازهای شغلی شرکت‌کنندگان را نیز دارا باشد.</p>
+ <p>مزیت اصلی این فرایند دو مرحله‌ای، ایجاد چرخه کامل یادگیری است: از یک سو آموزش فشرده و تعاملی در محیطی تخصصی، و از سوی دیگر همراهی مستمر برای تبدیل آموخته‌ها به مهارت‌های کاربردی در محیط کار واقعی. این الگو و مدل آموزشی بر پایه "آموزش مستمر" و "کاربردی‌سازی معارف دینی" استوار است.</p>
+ </div>
+ <div class="timeline">
+ <div class="timeline-item">
+ <div class="timeline-icon">
+ <i class="fas fa-mosque"></i>
+ </div>
+ <div class="timeline-content">
+ <h3>مرحله اول: رویداد آموزشی سه‌روزه در قم</h3>
+ <p>این دوره فشرده سه‌روزه در شهر مقدس قم برگزار می‌شود و شرکت‌کنندگان علاوه بر بهره‌مندی از فضای معنوی و زیارتی این شهر، از محضر اساتید مجرب بنیاد هدایت و امکانات آموزشی موسسه طه نیز استفاده خواهند کرد. برنامه‌ریزی به گونه‌ای است که فرصت‌های مناسبی برای بازدید و عبادت در حرم حضرت معصومه(س) و دیگر اماکن مقدسه نیز فراهم گردد.</p>
+ </div>
+ </div>
+ 
+ <div class="timeline-item">
+ <div class="timeline-icon">
+ <i class="fas fa-laptop"></i>
+ </div>
+ <div class="timeline-content">
+ <h3>مرحله دوم: پشتیبانی آفلاین و مجازی</h3>
+ <p>این مرحله شامل دو بخش است:</p>
+ <ul>
+ <li>آموزش مجازی برخی سرفصل‌ها: محتوای تخصصی که نیاز به زمان بیشتری دارند به صورت مجازی ارائه می‌شوند</li>
+ <li>پشتیبانی و همراهی: سیستم مشاوره آنلاین، گروه‌های بحث و تبادل نظر مجازی، ارائه منابع تکمیلی و ارزیابی مستمر</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section><!-- Stages Section -->
+ <section id="stages">
+ <div class="container">
+ <div class="section-header">
+ <h2>مراحل دوره</h2>
+ </div>
+ <div class="stages-container">
+ <div class="stage-card">
+ <div class="stage-header">
+ <h3>مرحله اول: رویداد آموزشی سه‌روزه در قم</h3>
+ </div>
+ <div class="stage-body">
+ <div class="syllabus">
+ <h4><i class="fas fa-map-marker-alt" style="color: var(--turquoise); margin-left: 10px;"></i> سرفصل‌های آموزشی</h4>
+ 
+ <h4>1. جایگاه و نقش امام جماعت در مراکز تخصصی:</h4>
+ <p>در این بخش، شرکت‌کنندگان با وظایف و مسئولیت‌های تخصصی امام جماعت در محیط‌های کاری آشنا می‌شوند. این شامل نقش مشورتی و راهنمایی دینی به تمام اعضای سازمان، تعامل سازنده با مدیریت و کارکنان برای نهادینه کردن ارزش‌های اسلامی، و روش‌های تأثیرگذاری فرهنگی در محیط‌های حرفه‌ای می‌شود. این محتوا در قالب سخنرانی‌های تخصصی و ارائه‌های کاربردی ارائه خواهد شد.</p>
+ 
+ <h4>2. جامعه پردازی ولایی با محوریت مسجد   و تقویت پیوند های اجتماعی :</h4>
+ <p>در این بازدید سه‌ساعته راوی‌محور، شرکت‌کنندگان با زبان هنر و تصویر، با جایگاه و ظرفیت‌های مدل امامت در تمدن اسلامی آشنا می‌شوند. این نمایشگاه با نمایش پیشینه تاریخی امامت از دوران اهل بیت(ع) تا عصر حاضر و گام دوم انقلاب اسلامی، انگیزه و بینش لازم برای ایفای نقش مؤثرتر را در اختیار امامان جماعت قرار می‌دهد.</p>
+ 
+ <h4>3. جهاد تبیین:</h4>
+ <p>این سرفصل به بررسی ضرورت‌ها، ویژگی‌ها و روش‌های جهاد تبیین در شرایط کنونی می‌پردازد. موضوعاتی مانند کانون جهاد تبیین، فناوری‌های مرتبط، سطوح کنشگری و روش‌های مشارکت‌دهی افراد، هم در قالب ارائه‌های تخصصی و هم در کارگاه‌های تعاملی مورد بحث قرار می‌گیرد.</p>
+ 
+ <h4>4. حل مسئله:</h4>
+ <p>در این بخش، فرآیند نظام‌مند حل مسئله با رویکرد تمدنی آموزش داده می‌شود. مراحل اصلی شامل:</p>
+ <ul>
+ <li>شناسایی و اولویت‌بندی معضلات</li>
+ <li>ریشه‌یابی مشکلات</li>
+ <li>ترسیم وضع مطلوب</li>
+ <li>ظرفیت‌شناسی</li>
+ <li>راه‌حل‌یابی و انتخاب بهترین گزینه</li>
+ <li>برنامه‌ریزی و اقدام میدانی</li>
+ <li>بازخوردگیری و گزارش نتایج</li>
+ </ul>
+ <p>این محتوا در قالب ارائه، کارگاه‌های تعاملی و بررسی تجربیات اجرایی ارائه می‌شود.</p>
+ 
+ <h4>5. ارتباط مؤثر:</h4>
+ <p>این سرفصل به آموزش مهارت‌های ضروری ارتباطی برای مبلغان دینی می‌پردازد. مباحثی مانند انواع گفتگو، عناصر ارتباط کلامی، موانع ارتباط مؤثر، فنون اقناع مخاطب و متعلقات ارتباط مؤثر، در قالب ارائه‌های علمی و کارگاه‌های گفت‌وگو محور بررسی می‌شوند.</p>
+ 
+ <h4>6. فن سخنرانی و خطابه:</h4>
+ <p>در این کارگاه عملی، شرکت‌کنندگان با اصول و تکنیک‌های سخنرانی مؤثر آشنا می‌شوند. موضوعات شامل مخاطب‌شناسی، ویژگی‌های گروه‌های سنی مختلف، راهبردهای سخنرانی، مدیریت اوج و فرود سخنرانی، زبان بدن و استفاده صحیح از لحن می‌باشد. این بخش به صورت کاملاً عملی و با تمرین‌های کاربردی برگزار می‌شود.</p>
+ </div>
+ </div>
+ </div>
+ 
+ <div class="stage-card">
+ <div class="stage-header">
+ <h3>مرحله دوم: نظام جامع پشتیبانی و آموزش مجازی</h3>
+ </div>
+ <div class="stage-body"><p>این مرحله به‌عنوان مکمل و مکانیزم تداوم‌بخش دوره حضوری، با بهره‌گیری از دو سامانه تخصصی «مدرسه هدایت» و «تجربه‌نگار» و یک شبکه اساتید و راهیاران با تجربه «شبکه راهیاری» طراحی شده است. این نظام آموزشی-پشتیبانی، یادگیری را از محدوده زمانی سه‌روزه فراتر برده و به فرآیندی مستمر و کاربردی تبدیل می‌کند که تا شش ماه ادامه خواهد داشت.</p>
+ 
+ <h3><i class="fas fa-graduation-cap" style="color: var(--turquoise); margin-left: 10px;"></i> ۱. آموزش‌های تخصصی مجازی (از طریق سامانه مدرسه هدایت):</h3>
+ <p>این بخش شامل بسته‌های آموزشی پیشرفته‌تر و تکمیلی است که به‌صورت زیر ارائه می‌شود:</p>
+ <ul>
+ <li><strong>دوره‌های تعاملی آنلاین:</strong>
+ <ul>
+ <li>۸ سرفصل تخصصی با موضوعات: روش‌های نوین تبلیغ در محیط‌های اداری، مدیریت بحران‌های اعتقادی، فنون مذاکره دینی، و تحلیل مسائل اجتماعی با رویکرد اسلامی</li>
+ <li>هر دوره شامل ویدئوهای آموزشی، آزمون‌های سنجش یادگیری و تمرین‌های عملی</li>
+ <li>امکان دسترسی به محتوا تا ۶ ماه پس از دوره</li>
+ </ul>
+ </li>
+ <li><strong>وبینارهای ماهانه:</strong>
+ <ul>
+ <li>برگزاری جلسات زنده با حضور اساتید سطح یک حوزوی و کارشناسان مجرب</li>
+ <li>بررسی موردی چالش‌های میدانی شرکت‌کنندگان</li>
+ <li>پرسش و پاسخ تخصصی در حوزه‌های مختلف</li>
+ </ul>
+ </li>
+ <li><strong>کتابخانه تخصصی دیجیتال:</strong>
+ <ul>
+ <li>دسترسی به سخنرانی‌های مرجع در حوزه تبلیغ دینی</li>
+ <li>بانک نمونه‌های موفق اجرایی از سراسر کشور</li>
+ </ul>
+ </li>
+ </ul>
+ 
+ <h3><i class="fas fa-headset" style="color: var(--turquoise); margin-left: 10px;"></i> ۲. نظام پشتیبانی حرفه‌ای (از طریق سامانه تجربه‌نگار و ارتباط با شبکه راهیاری):</h3>
+ <p>این بخش به‌صورت هوشمند و اختصاصی طراحی شده است:</p>
+ <ul>
+ <li><strong>سیستم مشاوره تخصصی:</strong>
+ <ul>
+ <li>امکان رزرو جلسات مشاوره آنلاین با اساتید</li>
+ <li>پاسخگویی به سوالات تخصصی</li>
+ <li>ارائه راهکارهای عملی متناسب با هر محیط کاری</li>
+ </ul>
+ </li>
+ <li><strong>شبکه تبادل تجربیات:</strong>
+ <ul>
+ <li>ایجاد گروه‌های تخصصی بر اساس نوع سازمان (بانک‌ها، ادارات، شرکت‌ها)</li>
+ <li>امکان ثبت و به‌اشتراک‌گذاری تجربیات موفق</li>
+ <li>برگزاری جلسات ماهانه هماندیشی مجازی</li>
+ </ul>
+ </li>
+ <li><strong>بانک پروژه‌های موفق:</strong>
+ <ul>
+ <li>مستندسازی نمونه‌های عملی اجراشده</li>
+ <li>ارائه الگوهای قابل تکثیر در سایر مراکز</li>
+ <li>تحلیل موردی چالش‌ها و راهکارها</li>
+ </ul>
+ </li>
+ </ul>
+ 
+ <h3><i class="fas fa-gift" style="color: var(--turquoise); margin-left: 10px;"></i> مکانیزم‌های انگیزشی:</h3>
+ <ul>
+ <li>اعطای گواهینامه‌های مرحله‌ای برای تکمیل دوره‌ها</li><li>معرفی تجربیات برتر در نشریات تخصصی</li>
+ <li>اعطای امتیاز در نظام ارزیابی عملکرد روحانیون</li>
+ </ul>
+ 
+ <h3><i class="fas fa-cogs" style="color: var(--turquoise); margin-left: 10px;"></i> پشتیبانی فنی:</h3>
+ <ul>
+ <li>تیم پشتیبانی تمام‌وقت برای رفع مشکلات فنی</li>
+ <li>آموزش استفاده از سامانه‌ها به‌صورت تصویری</li>
+ <li>امکان دسترسی از طریق موبایل و تبلت</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ 
+ <!-- Phase Summary Moved to Bottom of Section -->
+ <div class="phase-summary">
+ <h3>جمع‌بندی دو مرحله آموزشی</h3>
+ <p>این سیستم پشتیبانی با ویژگی‌های ویژه‌ای که دارد، چند هدف مهم را محقق می‌سازد:</p>
+ <ul>
+ <li>کمک می‌کند آنچه در دوره‌های حضوری آموخته‌ شده، به جای حفظ کردن موقت، تبدیل به مهارت‌های پایدار و کاربردی در کار روزمره شود.</li>
+ <li>هیچ امام جماعتی احساس تنهایی و سردرگمی نخواهد کرد، چرا که همیشه پشتیبانانی آماده پاسخگویی به سوالات و چالش‌های پیش رو وجود دارند.</li>
+ <li>ثبت سازمان‌یافته تجربیات موفق و چالش‌هاست. هر تجربه‌ای که یک امام جماعت در نقطه‌ای از کشور کسب می‌کند، به صورت منظم ثبت شده و در اختیار دیگران قرار می‌گیرد. این ویژگی باعث می‌شود چرخه یادگیری هیچ‌گاه متوقف نشود.</li>
+ <li>ارتباط بین شرکت‌کنندگان دوره‌ها و اساتید نیز به شکل مستمر حفظ می‌شود. این ارتباط دوطرفه هم به روزآمد ماندن محتوای آموزشی کمک می‌کند و هم امکان پاسخگویی به سوالات جدید را فراهم می‌سازد.</li>
+ <li>سیستم به گونه‌ای طراحی شده که همواره دانش و مهارت‌ها را با توجه به تحولات جامعه و نیازهای جدید به روزرسانی می‌کند، تا پاسخگوی مسائل روز باشد.</li>
+ </ul>
+ <p>این دو مرحله مکمل یکدیگر هستند و یک سیستم آموزشی-پشتیبانی جامع را تشکیل می‌دهند که هم آموزش عمیق و تخصصی ارائه می‌دهد و هم تضمین می‌کند که این آموخته‌ها به مهارت‌های عملی و پایدار تبدیل شوند.</p>
+ </div>
+ </div>
+ </section>
+
+ <!-- Teasers Section -->
+ <section id="teasers">
+   <div class="container">
+     <div class="section-header">
+       <h2> دوره های آموزشی در قاب تصویر</h2>
+     </div>
+     
+     <div class="teasers-container">
+       <!-- Teaser 1 -->
+       <div class="teaser-card">
+         <div class="teaser-header">
+           <i class="fas fa-play-circle"></i>
+           <h3>تیزر نمایشگاه مسجد جامعه‌پرداز</h3>
+         </div>
+         <div class="teaser-body">
+           <div class="video-wrapper">
+             <iframe 
+               src="https://www.aparat.com/video/video/embed/videohash/arw79v6/vt/frame" 
+               allowFullScreen="true"
+               webkitallowfullscreen="true"
+               mozallowfullscreen="true"
+             ></iframe>
+           </div>
+         </div>
+       </div>
+       
+       <!-- Teaser 2 -->
+       <div class="teaser-card">
+         <div class="teaser-header">
+           <i class="fas fa-play-circle"></i>
+           <h3>دوره آموزشی شهیده کرباسی</h3>
+         </div>
+         <div class="teaser-body">
+           <div class="video-wrapper">
+             <iframe 
+               src="https://www.aparat.com/video/video/embed/videohash/sokfq1t/vt/frame" 
+               allowFullScreen="true"
+               webkitallowfullscreen="true"
+               mozallowfullscreen="true"
+             ></iframe>
+           </div>
+         </div>
+       </div>
+       
+       <!-- Teaser 3 -->
+       <div class="teaser-card">
+         <div class="teaser-header">
+           <i class="fas fa-play-circle"></i>
+           <h3>دوره‌های آموزشی شهید آرمان</h3>
+         </div>
+         <div class="teaser-body">
+           <div class="video-wrapper">
+             <iframe 
+               src="https://www.aparat.com/video/video/embed/videohash/toa39d6/vt/frame" 
+               allowFullScreen="true"
+               webkitallowfullscreen="true"
+               mozallowfullscreen="true"
+             ></iframe>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+
+ <!-- Cost Section -->
+ <section id="cost">
+ <div class="container">
+ <div class="section-header">
+ <h2>برآورد هزینه‌</h2>
+ </div>
+ <table class="cost-table">
+ <thead>
+ <tr>
+ <th>ردیف</th>
+ <th>عنوان</th>
+ <th>مبلغ هر واحد (تومان)</th>
+ <th>تعداد</th>
+ <th>توضیحات</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>1</td>
+ <td> اسکان </td>
+ <td> 600.000 </td>
+ <td> 3 روز</td>
+ <td>-</td>
+ </tr>
+ <tr>
+ <td>2</td>
+ <td>تغذیه (وعده‌های غذایی)</td>
+ <td> 1.700.000</td>
+ <td>3 روز</td>
+ <td>...</td>
+ </tr>
+ <tr>
+ <td>3</td>
+ <td>پذیرایی (میان وعده)</td>
+ <td> 600.000</td>
+ <td>3 روز</td>
+ <td> هر روز دو وعده </td>
+ </tr>
+ <tr>
+ <td>4</td>
+ <td>بسته هدیه مخاطبین</td>
+ <td>1.200.000</td>
+ <td> یک بسته </td>
+ <td>-</td>
+ </tr>
+ <tr>
+ <td>5</td>
+ <td>خدمات آموزشی</td>
+ <td> 1.200.000</td>
+ <td> 3 روز</td>
+ <td>هزینه حضور و اسکان و حق الزحمه و ...استاد و مربی</td>
+ </tr>
+ <tr>
+ <td>6</td>
+ <td>خدمات رسانه‌ای</td>
+ <td>900.000</td>
+ <td> 3 روز</td>
+ <td>هزینه حضور، اسکان، حق الزحمه و ...نیروی رسانه ای</td>
+ </tr>
+ <tr>
+ <td>7</td>
+ <td>تأمین کلاس، سالن، تجهیزات آموزشی و چاپ محتوای آموزشی</td>
+ <td>900.000</td>
+ <td> 3 روز </td>
+ <td>-</td>
+ </tr>
+ <tr>
+ <td>8</td>
+ <td>بسته پشتیبانی آفلاین و مجازی</td>
+ <td> 2.000.000</td>
+ <td> مطابق با سرفصل های ارائه شده </td>
+ <td> بسته پشتیبانی 6 ماهه </td>
+ </tr>
+ <tr>
+ <td>9</td>
+ <td>بسته محتوایی شامل کتاب حل مسئله و فلش محتوایی</td>
+ <td>900.000</td>
+ <td> 1 بسته </td>
+ <td>-</td>
+ </tr>
+ <tr>
+ <td>-</td>
+ <td>جمع کل </td>
+ <td>10.000.000  هر نفر</td>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>درباره بنیاد هدایت</h3>
+                    <p>بنیاد جامعه‌پردازی هدایت با هدف توانمندسازی شبکه امامت و کنشگران مسجدی فعالیت می‌کند و در راستای تحقق گفتمان "مسجد جامعه‌پرداز" گام برمی‌دارد.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>ارتباط با ما</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 025-37253806</li>
+                        <li><i class="fas fa-map-marker-alt"></i> قم: جمکران، جنب مسجد مقدس جمکران - بلوار حضرت نرجس (س) - طبقه دومِ دفتر خادمین افتخاری مسجد مقدس جمکران</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>لینک‌های مفید و مرتبط</h3>
+                    <ul>
+                        <li><a href="https://bonyadehedayat.com/%D8%B9%D9%85%D9%84%DA%A9%D8%B1%D8%AF-%D8%A8%D9%86%DB%8C%D8%A7%D8%AF-2/" target="_blank"><i class="fas fa-link"></i> درباره ما</a></li>
+                        <li><a href="https://hoseiniehedayat.ir/" target="_blank"><i class="fas fa-link"></i> حسینیه هدایت</a></li>
+                        <li><a href="https://madrese-hedayat.ir/" target="_blank"><i class="fas fa-link"></i> مدرسه هدایت</a></li>
+                        <li><a href="https://tajrobenegar.ir/" target="_blank"><i class="fas fa-link"></i> سامانه تجربه نگار</a></li>
+                        <li><a href="https://eitaa.com/khaneh_emam" target="_blank"><i class="fas fa-link"></i> کانال ایتا خانه امام</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© ۱۴۰۳ کلیه حقوق برای بنیاد هدایت محفوظ است. طراحی شده با افتخار برای خدمت به روحانیت</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
